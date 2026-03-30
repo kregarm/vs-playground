@@ -17,4 +17,9 @@ export default defineConfig({
       threshold: 0.1,
     },
   },
+  reporter: [
+    ['line'],
+    ['html', { open: 'never' }],
+    ['github'],
+  ],
 });

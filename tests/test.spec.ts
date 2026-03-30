@@ -19,7 +19,6 @@ test.describe('Filtering scnnarios', () => {
         const resultCard = landingPage.resultCardByTitleAndPrice('Trgovina', 'Po dogovoru');
 
         await resultCard.clickOnCard();
-        await page.pause()
         // todo complete scenario here
 
     });
