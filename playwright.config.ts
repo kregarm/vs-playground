@@ -11,6 +11,7 @@ export default defineConfig({
     timezoneId: 'UTC',
     colorScheme: 'light',
     screenshot: 'only-on-failure',
+    trace: 'retain-on-failure',
   },
   expect: {
     toHaveScreenshot: {
