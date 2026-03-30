@@ -22,10 +22,5 @@ test.describe('Filtering scnnarios', () => {
         // todo complete scenario here
 
     });
-
-    test('This should fail so I can validate CI', async ({ landingPage, page }) => {
-        const resultCard = landingPage.resultCardByTitleAndPrice('LOL', 'Forget about it');
-        await resultCard.clickOnCard();
-    });
 })
 
