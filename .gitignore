@@ -1,0 +1,43 @@
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+*.log
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build output
+dist/
+build/
+out/
+coverage/
+coverage-final.json
+
+# Playwright output
+test-results/
+playwright-report/
+screenshots/
+videos/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.suo
+*.user
+*.ntvs*
+*.njsproj
+*.sln
+
+# optional
+*.tgz
+*.tmp
