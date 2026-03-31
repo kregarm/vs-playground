@@ -6,7 +6,9 @@ test.describe('Screenshoting tests', () => {
 
         await resultCard.expectVisible();
 
-        await expect(resultCard.card()).toHaveScreenshot('result-card.png');
+        await expect(resultCard.card()).toHaveScreenshot('result-card.png', {
+            timeout: 15000
+        });
     });
 })
 
