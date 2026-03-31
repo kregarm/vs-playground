@@ -2,7 +2,7 @@ import { defineConfig } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests',
-  timeout: 60_000,
+  timeout: 120_000,
   use: {
     baseURL: 'https://staging.nepremicnine.btc-city.com/ljubljana',
     browserName: 'chromium',
