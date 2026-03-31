@@ -7,11 +7,15 @@ export class ResultCard extends BaseCard {
     }
 
     static byTitleAndPrice(page: Page, title: string, price: string): ResultCard {
-        const root = page.locator('div').filter({
-            has: page.locator('h6', { hasText: title }),
-        }).filter({
-            has: page.getByText(price, { exact: false }),
-        }).first();
+        const root = page
+            .locator('div.cursor-pointer')
+            .filter({
+                has: page.locator('h6 span.capitalize', { hasText: title }),
+            })
+            .filter({
+                has: page.getByText(price, { exact: false }),
+            })
+            .first();
 
         return new ResultCard(root);
     }

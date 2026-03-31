@@ -12,6 +12,9 @@ export default defineConfig({
     colorScheme: 'light',
     screenshot: 'only-on-failure',
     trace: 'retain-on-failure',
+    launchOptions: {
+      slowMo: 200,
+    },
   },
   expect: {
     toHaveScreenshot: {
