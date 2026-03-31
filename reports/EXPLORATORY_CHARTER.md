@@ -5,6 +5,7 @@
 **Objective**
 Explore the app to understand its purpose, map the user flows, and document its features
 <em>the point of this charter is merely to understand what the app is and influence further exploratory charters</em>
+
 **Notes:**
 - This is a real estate app seemingly for BTC
 -Main part of the screen is taken up by an interactive map
@@ -23,6 +24,7 @@ Explore the app to understand its purpose, map the user flows, and document its 
 
 **Objective**
 Check if the wizard actually helps and shows correct results or not; wizard uses the filtering to show the result - validate results match between wizard and filtering
+
 **Notes:**
 - Trgovina + 200 m2 <-> 500 m2 + zunanja površina results in a property on the 1st floor
 - - I might not understand “zunanja površina” but I assume the 1st floor is not outside
@@ -34,7 +36,8 @@ Check if the wizard actually helps and shows correct results or not; wizard uses
 ## Charter 3: Submit form
 
 **Objective**
-General submit form exploratory test - basic validations check, try to spot any funny behavior 
+General submit form exploratory test - basic validations check, try to spot any funny behavior
+
 **Notes:**
 - Validations seem fine, but there is “Podjetje” dropdown which pulls data for the BE
 - - Seems like companies are missing; could be deliberate or a poor dataset
@@ -43,7 +46,7 @@ General submit form exploratory test - basic validations check, try to spot any 
 - - Bug spotted - open enquiry form within NM or MS, toggle “Tip prostora” -> I get redirected to /ljubljana with a bunch of console errors and a page that does not load
 - - Another one - enquiry is tied to one of the available property types; meaning that dropdown has one option and this one can be deleted and no new one can be selected
 
-** I don't have access to the management part of the app -> I see my data in a network request that did not fail and I assume that it works correctly **
+**I don't have access to the management part of the app -> I see my data in a network request that did not fail and I assume that it works correctly**
 
 ## Map
 
