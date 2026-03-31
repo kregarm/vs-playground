@@ -6,7 +6,7 @@ export default defineConfig({
     baseURL: 'https://staging.nepremicnine.btc-city.com/ljubljana',
     browserName: 'chromium',
     headless: true,
-    viewport: { width: 1440, height: 900 },
+    viewport: { width: 1920, height: 900 },
     locale: 'en-US',
     timezoneId: 'UTC',
     colorScheme: 'light',
