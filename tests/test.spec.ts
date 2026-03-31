@@ -15,11 +15,11 @@ test.describe('Filtering scnnarios', () => {
         await expect(page.getByText('Noben prostor ne ustreza izbranim filtrom.')).toBeHidden();
     });
 
-    test('User can filter listings and open details', async ({ landingPage }) => {
+    test('User can filter listings and open details', async ({ landingPage, page }) => {
         const resultCard = landingPage.resultCardByTitleAndPrice('Trgovina', 'Po dogovoru');
 
         await resultCard.clickOnCard();
-        // todo complete scenario here
+        await page.pause()
 
     });
 })
