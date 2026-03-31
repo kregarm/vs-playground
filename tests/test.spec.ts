@@ -1,4 +1,5 @@
 import { test, expect } from '../fixtures/pages';
+import { ListingPage } from '../pages/listingPage';
 
 test.describe('Filtering scnnarios', () => {
     test('Filter to no results and reset filter', async ({ landingPage, page }) => {
@@ -14,13 +15,29 @@ test.describe('Filtering scnnarios', () => {
 
         await expect(page.getByText('Noben prostor ne ustreza izbranim filtrom.')).toBeHidden();
     });
-
-    test('User can filter listings and open details', async ({ landingPage, page }) => {
-        const resultCard = landingPage.resultCardByTitleAndPrice('Trgovina', 'Po dogovoru');
-
-        await resultCard.clickOnCard();
-        await page.pause()
-
-    });
 })
 
+test.describe('Form scenarios', () => {
+    test.only('User can successfully submit a form', async ({ landingPage, page }) => {
+        const resultCard = landingPage.resultCardByTitleAndPrice('Trgovina', 'Po dogovoru');
+        const listingPage = new ListingPage(page);
+
+        await resultCard.clickOnCard();
+
+        await listingPage.waitToLoad();
+
+        await listingPage.fillContactForm({
+            firstName: 'Janja',
+            lastName: 'Novak',
+            phone: '031000000',
+            email: 'janja.novak@test.com',
+            companySearch: 'medic',
+            companyOption: 'MEDIC-INA EMERŠIČ d.o.o.',
+            message: 'Zanimam se za najem prostora.',
+            consent: true,
+        });
+
+        await listingPage.submitForm();
+        await listingPage.expectSuccessMessage();
+    });
+})
