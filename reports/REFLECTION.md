@@ -1,6 +1,4 @@
-1. You’ve just joined the team. There’s no test suite, no QA
-process, and the team ships to production weekly. Where do
-you start, and what do you consciously deprioritise — and why?
+## You’ve just joined the team. There’s no test suite, no QA process, and the team ships to production weekly. Where do you start, and what do you consciously deprioritise — and why?
 
 I’d focus first on the next release, because that is the most immediate business risk. I’d use exploratory testing to learn the product while still adding value right away, and I’d spend time understanding the team, the release process, and the areas that have historically caused problems.
 
@@ -8,9 +6,7 @@ Because the team ships weekly, I’d introduce a lightweight smoke regression su
 
 I would consciously deprioritize full-scale automation, heavy documentation, and broad coverage at the start. Without understanding the product and the real risks, those would be expensive investments with low short-term return. My priority would be fast risk reduction and creating a foundation the team can build on.
 
-2. A developer on your team uses AI to generate a full test suite
-for a new feature in 20 minutes. What's your reaction, and what
-do you do next that they can't?
+## A developer on your team uses AI to generate a full test suite for a new feature in 20 minutes. What's your reaction, and what do you do next that they can't?
 
 Curiosity, mostly. I’d inspect the suite and ask whether it gives us real confidence or just a lot of test cases. I’d want to see how well it maps to business-critical behavior, not just to the feature code.
 
