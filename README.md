@@ -16,6 +16,10 @@ In reality, the locators are fragile and prone to breaking. If I had access to t
 
 I also ran out of the time I had set aside for this, so the scenario coverage is not complete. I added the filtering flow and result card coverage, and I think the scope could be expanded fairly easily from here, but I do not have the time or mental bandwidth to push it further before Friday.
 
+## Github actions
+
+This was the fun and tricky part as everything was working just fine locally, but died within CI. I think it boils down to slow instances on github and a heavy app. I really had to push the timeouts so this even runs properly - killing parallel runs made the biggest impact here.
+
 ## Target URL
 
 `https://staging.nepremicnine.btc-city.com/ljubljana`
@@ -56,7 +60,22 @@ Run the tests:
 
 ```bash
 docker run --rm vs-playground
+
 ```
+## Creating screenshots
+
+Screenshot assertions are handled with Playwright snapshot testing.
+
+To generate the initial screenshots on Linux or update them after an intentional UI change, run:
+
+```bash
+docker run --rm -v "$(pwd)":/app -w /app vs-playground npx playwright test --update-snapshots
+```
+
+```bash
+npx playwright test --update-snapshots
+```
+
 
 ## What is covered
 
