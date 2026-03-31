@@ -2,7 +2,7 @@
 
 ## General Enquiry form has two issues.
 
-1. ### Toggling "Tip Prostora" dropdown always redirects me to /ljubljana even when I am on MS on NM cities and breaks the map
+### 1. Toggling "Tip Prostora" dropdown always redirects me to /ljubljana even when I am on MS on NM cities and breaks the map
 
 #### Reproduction steps
 1. Open the page https://staging.nepremicnine.btc-city.com/ljubljana
@@ -40,7 +40,7 @@ Yes
 
 Too simple to not automate, and more importantly, it is on one of the main flows that should work no matter what.
 
-2. ### Property type can be deleted, but not added back
+### 2. Property type can be deleted, but not added back
 
 #### Reproduction steps
 1. Open the page https://staging.nepremicnine.btc-city.com/ljubljana
