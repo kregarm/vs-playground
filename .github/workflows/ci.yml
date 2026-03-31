@@ -1,5 +1,5 @@
 name: CI
-on: [push, pull_request]
+on: [push]
 
 jobs:
   test:
@@ -17,7 +17,7 @@ jobs:
           docker run --rm \
             -v "$(pwd)/playwright-report:/app/playwright-report" \
             -v "$(pwd)/test-results:/app/test-results" \
-            playwright-tests
+            playwright-tests npx playwright test --workers=1
 
       - name: Upload HTML report
         if: always()
